@@ -1,0 +1,2930 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008080
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Notations
+\end_layout
+
+\begin_layout Standard
+We distinguish between the background quantities and perturbations with superscripts,
+ e.g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{ab}=g_{ab}^{(0)}+\zeta h_{ab}^{(1)}+\zeta^{2}h_{ab}^{(2)}+\mathcal{O}\left(\zeta^{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The metric signature is 
+\begin_inset Formula $(+,-,-,-)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Horizon penetrating hyperboloidally compactified coordinates for Kerr spacetime
+\end_layout
+
+\begin_layout Standard
+A minimal gauge transformation from the Boyer-Lindquist coordinates 
+\begin_inset Formula $(t,r,\vartheta,\varphi)$
+\end_inset
+
+ to the horizon penetrating hyperboloidally compactified coordinates 
+\begin_inset Formula $(T,R,\vartheta,\phi)$
+\end_inset
+
+ reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T=t+r_{*}-2r-4M\ln r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\frac{L^{2}}{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi=\varphi+\int\frac{a}{r^{2}+a^{2}}\mathrm{d}r_{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathrm{d}r_{*}=\frac{r^{2}+a^{2}}{r^{2}-2Mr+a^{2}}\mathrm{d}r.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The key point for achieving horizon penetrating foliations is that 
+\begin_inset Formula $T\sim t+r_{*},r_{*}\to-\infty$
+\end_inset
+
+,
+ and the key point for achieving hyperboloidal foliations is that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $T\sim t-r_{*},r_{*}\to+\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The final metric reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathrm{d}s^{2}=(1-\frac{2L^{2}MR}{L^{4}+a^{2}R^{2}Cos[\vartheta]^{2}})\mathrm{d}T^{2}+2\frac{\left[L^{2}(\frac{4MR(L^{2}+2MR)}{L^{4}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2}}-1)-4MR\right]}{R^{2}}\mathrm{d}T\mathrm{d}R-\frac{4M(L^{2}+2MR)(-4L^{2}M+a^{2}R+a^{2}R\mathrm{Cos[}2\vartheta])}{R^{2}(L^{4}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2})}\mathrm{d}R^{2}+2(\frac{2aL^{2}MR\mathrm{Sin[}\vartheta]^{2}}{L^{4}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2}})\mathrm{d}T\mathrm{d}\phi-\frac{2aL^{2}(L^{4}+4L^{2}MR+8M^{2}R^{2}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2})\mathrm{Sin[}\vartheta]^{2}}{R^{2}(L^{4}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2})}\mathrm{d}R\mathrm{d}\phi-(\frac{L^{4}}{R^{2}}+a^{2}\mathrm{Cos[}\vartheta]^{2})\mathrm{d}\vartheta^{2}-\mathrm{Sin[}\vartheta]^{2}(a^{2}+\frac{L^{4}}{R^{2}}+\frac{2a^{2}L^{2}MR\mathrm{Sin[}\vartheta]^{2}}{L^{4}+a^{2}R^{2}\mathrm{Cos[}\vartheta]^{2}})\mathrm{d}\phi^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The unperturbed tetrad vectors 
+\begin_inset Formula $l^{(0)\mu}$
+\end_inset
+
+ and 
+\begin_inset Formula $n^{(0)\mu}$
+\end_inset
+
+ are chosen along the repeated principal null directions of the Weyl tensor
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+l^{(0)\mu}=\frac{R^{2}}{L^{4}+a^{2}R^{2}\cos^{2}\vartheta}\left[2M(2M-\frac{a^{2}R}{L^{2}}),-\frac{1}{2}(L^{2}-2MR)-\frac{a^{2}R^{2}}{L^{2}},0,a)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n^{(0)\mu}=\left(2+\frac{4MR}{L^{2}},\frac{R^{2}}{L^{2}},0,0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $m^{(0)\mu}$
+\end_inset
+
+ is chosen as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+m^{(0)\mu}=\frac{1}{\sqrt{2}(r-\mathrm{i}a\cos\vartheta)}\left(-\mathrm{i}a\sin\vartheta,0,-1,-\frac{\mathrm{i}}{\sin\vartheta}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+such that 
+\begin_inset Formula $\gamma^{(0)}=0$
+\end_inset
+
+,
+ which is useful for the metric reconstruction.
+\end_layout
+
+\begin_layout Standard
+With this tetrad and metric,
+ the nonzero NP scalars are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\Psi_{2}^{(0)}=-\frac{MR^{3}}{\left(L^{2}-iaR\mathrm{cos}\left(\vartheta\right)\right)^{3}}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\rho^{(0)}= & -\frac{R\left(a^{2}R^{2}+L^{4}-2L^{2}MR\right)}{2\left(L^{2}-iaR\cos(\vartheta)\right)^{2}\left(L^{2}+iaR\cos(\vartheta)\right)},\\
+\mu^{(0)}= & \frac{R}{-L^{2}+iaR\cos(\vartheta)},\\
+\tau^{(0)}= & \frac{iaR^{2}\sin(\vartheta)}{\sqrt{2}\left(L^{2}-iaR\cos(\vartheta)\right)^{2}},\\
+\pi^{(0)}= & -\frac{iaR^{2}\sin(\vartheta)}{\sqrt{2}\left(a^{2}R^{2}\cos^{2}(\vartheta)+L^{4}\right)},\\
+\epsilon^{(0)}= & \frac{R^{2}\left(a^{2}(-R)-ia\cos(\vartheta)\left(L^{2}-MR\right)+L^{2}M\right)}{2\left(L^{2}-iaR\cos(\vartheta)\right)^{2}\left(L^{2}+iaR\cos(\vartheta)\right)},\\
+\alpha^{(0)}= & \frac{R\cot(\vartheta)}{\sqrt{2}\left(2L^{2}+2iaR\cos(\vartheta)\right)},\\
+\beta^{(0)}= & \frac{R\left(-L^{2}\cot(\vartheta)+iaR\sin(\vartheta)\left(\csc^{2}(\vartheta)+1\right)\right)}{2\sqrt{2}\left(L^{2}-iaR\cos(\vartheta)\right)^{2}}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teukolsky equation
+\end_layout
+
+\begin_layout Standard
+Two of Bianchi Identities including derivatives of 
+\begin_inset Formula $\Psi_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(D+4\epsilon-\rho)\Psi_{4}-(\bar{\delta}+4\pi+2\alpha)\Psi_{3}+3\lambda\Psi_{2}=+\mathcal{R}_{d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\delta+4\beta-\tau\right)\Psi_{4}-\left(\Delta+2\gamma+4\mu\right)\Psi_{3}+3\nu\Psi_{2}=-\mathcal{R}_{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{aligned}d_{3} & \equiv\bar{\delta}+3\alpha+\bar{\beta}+4\pi-\bar{\tau},\\
+d_{4} & \equiv\Delta+4\mu+\bar{\mu}+3\gamma-\bar{\gamma},
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then we have
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+\left[d_{4}^{(0)}(D+4\epsilon-\rho)-d_{3}^{(0)}\left(\delta+4\beta-\tau\right)\right]\Psi_{4}+\left[d_{3}^{(0)}(\Delta+2\gamma+4\mu)-d_{4}^{(0)}\left(\bar{\delta}+4\pi+2\alpha\right)\right]\Psi_{3}+3\left[d_{4}^{(0)}\lambda-d_{3}^{(0)}\nu\right]\Psi_{2}=d_{4}^{(0)}\mathcal{R}_{d}+d_{3}^{(0)}\mathcal{R}_{h}\label{teuk4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{d}=(\bar{\delta}+2\alpha-\bar{\tau})\Phi_{21}-(\Delta+\bar{\mu}+2\gamma-2\bar{\gamma})\Phi_{20}{\color{}+2\nu\Phi_{10}+\bar{\sigma}\Phi_{22}-2\lambda\Phi_{11}},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{h}=(\Delta+2\bar{\mu}+2\gamma)\Phi_{21}-(\bar{\delta}-\bar{\tau}+2\alpha+2\bar{\beta})\Phi_{22}{\color{}-2\nu\Phi_{11}-\bar{\nu}\Phi_{20}+2\lambda\Phi_{12}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the Teukolsky identity in a vacuum Petrov type D spacetime
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ [\Delta+(a+1)\gamma-\bar{\gamma}-b\mu+\bar{\mu}]{\color{}(\bar{\delta}+a\alpha-b\pi)}-[\bar{\delta}+(a+1)\alpha+\bar{\beta}-b\pi-\bar{\tau}]{\color{}(\Delta+a\tau-b\mu)}\right\} ^{(0)}f=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $a=2,b=-4$
+\end_inset
+
+ and the identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3\left[d_{4}^{(0)}\lambda^{(1)}-d_{3}^{(0)}\nu^{(1)}\right]\Psi_{2}^{(0)}=-\Psi_{2}^{(0)}\Psi_{4}^{(1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and expanding 
+\begin_inset Formula $\ref{teuk4}$
+\end_inset
+
+ at the first order,
+ we obtain the first order Teukolsky equation for 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Psi_{4}^{(1)}$
+\end_inset
+
+,
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+_{-2}\mathcal{T}\Psi_{4}^{(1)}=\mathcal{R}_{4}^{(1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $_{-2}\mathcal{T}\equiv\left[d_{4}^{(0)}(D+4\epsilon-\rho)^{(0)}-d_{3}^{(0)}\left(\delta+4\beta-\tau\right)^{(0)}-3\Psi_{2}^{(0)}\right],\mathcal{R}_{4}^{(1)}\equiv d_{4}^{(0)}\mathcal{R}_{d}^{(1)}+d_{3}^{(0)}\mathcal{R}_{h}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+ one can obtains the second order Teukolsky equation 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $_{-2}\mathcal{T}\Psi_{4}^{(2)}=\mathcal{S}_{4}^{(2)}+\mathcal{R}_{4}^{(2)}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathcal{R}_{4}^{(2)}=d_{4}^{(0)}\mathcal{R}_{d}^{(2)}+d_{3}^{(0)}\mathcal{R}_{h}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\begin_inset Formula 
+\[
+\begin{aligned}\mathcal{S}_{4}^{(2)} & \equiv-[d_{4}^{(0)}(D+4\epsilon-\rho)^{(1)}-d_{3}^{(0)}(\delta+4\beta-\tau)^{(1)}]\Psi_{4}^{(1)}\\
+ & +[d_{4}^{(0)}(\bar{\delta}+2\alpha+4\pi)^{(1)}-d_{3}^{(0)}(\Delta+2\gamma+4\mu)^{(1)}]\Psi_{3}^{(1)}\\
+ & -3[d_{4}^{(0)}\lambda^{(1)}-d_{3}^{(0)}\nu^{(1)}]\Psi_{2}^{(1)}\\
+ & +3\Psi_{2}^{(0)}[(d_{4}^{(1)}-3\mu^{(1)})\lambda^{(1)}-(d_{3}^{(1)}-3\pi^{(1)})\nu^{(1)}]\quad
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+ using the Teukolsky identity,
+ we can obtain (source-free) Teukolsky equations for other NP scalars,
+ i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{+2}\mathcal{T}\Psi_{0}^{(1)}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{-1}\mathcal{T}\phi_{2}^{(1)}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{+1}\mathcal{T}\phi_{0}^{(1)}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{0}\mathcal{T}\Phi^{(1)}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{+2}\mathcal{T}\equiv[(D-3\epsilon+\bar{\epsilon}-4\rho-\bar{\rho})^{(0)}(\Delta-4\gamma+\mu)^{(0)}-(\delta+\bar{\pi}-\bar{\alpha}-3\beta-4\tau)^{(0)}(\bar{\delta}+\pi-4\alpha)^{(0)}]-3\Psi_{2}^{(0)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{-1}\mathcal{T}\equiv\left[\left(\Delta+\gamma-\bar{\gamma}+2\mu+\bar{\mu}\right)^{(0)}\left(D-\rho+2\epsilon\right)^{(0)}-\left(\bar{\delta}+\alpha+\bar{\beta}+2\pi-\bar{\tau}\right)^{(0)}\left(\delta-\tau+2\beta\right)^{(0)}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{+1}\mathcal{T}\equiv[(D-\epsilon+\bar{\epsilon}-2\rho-\bar{\rho})^{(0)}(\Delta-2\gamma+\mu)^{(0)}-(\delta+\bar{\pi}-\bar{\alpha}-\beta-2\tau)^{(0)}(\bar{\delta}+\pi-2\alpha)^{(0)}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+_{0}\mathcal{T}\equiv[(\Delta-\gamma-\bar{\gamma}+\mu+\bar{\mu})^{(0)}D^{(0)}+(D+\epsilon+\bar{\epsilon}-\rho-\bar{\rho})^{(0)}\Delta^{(0)}-(\bar{\delta}-\alpha+\bar{\beta}-\bar{\tau}+\pi)^{(0)}\delta^{(0)}-(\delta-\bar{\alpha}+\beta-\tau+\bar{\pi})^{(0)}\bar{\delta}^{(0)}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the Teukolsky equations can be written as a unified equation by a master function 
+\begin_inset Formula $\hat{\psi}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{2\Sigma}{R}\right)\,\,_{-2}\mathcal{T}\left(R\hat{\psi}\right)=0,\left(\frac{2\Sigma}{R\left(\Psi_{2}^{(0)}/M\right)^{4/3}}\right)\,\,_{+2}\mathcal{T}\left(R\left(\frac{\Psi_{2}^{(0)}}{M}\right)^{4/3}\hat{\psi}\right)=0,\left(\frac{2\Sigma}{R}\right)\,\,_{-1}\mathcal{T}\left(R\hat{\psi}\right)=0,\left(\frac{2\Sigma}{R\left(\Psi_{2}^{(0)}/M\right)^{2/3}}\right)\,\,_{+1}\mathcal{T}\left(R\left(\frac{\Psi_{2}^{(0)}}{M}\right)^{2/3}\hat{\psi}\right)=0,\left(\frac{2\Sigma}{R}\right)\,\,_{0}\mathcal{T}\left(R\hat{\psi}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Sigma=r^{2}+a^{2}\cos^{2}\vartheta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which,
+ in terms of these variables in our coordinates and tetrad,
+ reads
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[C_{TT}\partial_{T}^{2}+C_{TR}\partial_{T}\partial_{R}+C_{RR}\partial_{R}^{2}-_{s}\tilde{\Delta}+C_{T\phi}\partial_{T}\partial_{\phi}+C_{R\phi}\partial_{R}\partial_{\phi}+C_{T}\partial_{T}+C_{R}\partial_{R}+C_{\phi}\partial_{\phi}+C\right]\hat{\psi}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{TT}=8M\left(2M-\frac{a^{2}R}{L^{2}}\right)\left(1+\frac{2MR}{L^{2}}\right)-a^{2}\sin^{2}\vartheta,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $C_{TR}=-2\left[L^{2}-\left(8M^{2}-a^{2}\right)\frac{R^{2}}{L^{2}}+4\frac{a^{2}M}{L}\frac{R^{3}}{L^{3}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{RR}=-\left(L^{2}-2MR+a^{2}\frac{R^{2}}{L^{2}}\right)\frac{R^{2}}{L^{2}},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $C_{T\phi}=2a\left(1+\frac{4MR}{L^{2}}\right),C_{R\phi}=2a\frac{R^{2}}{L^{2}},C_{\phi}=\frac{2aR}{L^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\color{red}_{s}}\tilde{\Delta}=\partial_{\vartheta}^{2}+\cot\vartheta\partial_{\vartheta}+\csc^{2}\vartheta\partial_{\phi}^{2}+2i{\color{}s}\cot\vartheta\csc\vartheta\partial_{\phi}+\left({\color{}s}-{\color{}s^{2}}\cot^{2}\vartheta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{T}=2[2M(-{\color{}s}+(2+{\color{}s})\frac{2MR}{L^{2}}-\frac{3a^{2}R^{2}}{L^{4}})-\frac{a^{2}R}{L^{2}}+i{\color{}s}a\cos\vartheta]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{R}=2R\left[-(1+{\color{}s})+({\color{}s}+3)\frac{MR}{L^{2}}-\frac{2a^{2}R^{2}}{L^{4}}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=2\left[(1+{\color{}s})\frac{MR}{L^{2}}-\frac{a^{2}R^{2}}{L^{4}}\right]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Metric Reconstruction
+\end_layout
+
+\begin_layout Standard
+Solving the second order Teukolsky equation 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $_{-2}\mathcal{T}\Psi_{4}^{(2)}=\mathcal{S}_{4}^{(2)}+\mathcal{R}_{4}^{(2)}$
+\end_inset
+
+ requires 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+reconstructions of metric perturbations consistent with 
+\begin_inset Formula $\Psi_{4}^{(1)}$
+\end_inset
+
+ to compute 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{S}_{4}^{(2)}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+A metric reconstruction method for the case of vacuum perturbations works in the outgoing radiation gauges
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n^{(0)\mu}h_{\mu\nu}=0,h_{\mu}^{\mu}=0$
+\end_inset
+
+,
+ and the first-order tetrad vectors are chosen as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+l_{\mu}^{(1)}=\frac{1}{2}h_{ll}n_{\mu}^{(0)},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n_{\mu}^{(1)}=\frac{1}{2}h_{nn}l_{\mu}^{(0)}+h_{ln}n_{\mu}^{(0)}=0,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+m_{\mu}^{(1)}=h_{nm}l_{\mu}^{(0)}+h_{lm}n_{\mu}^{(0)}-\frac{1}{2}h_{m\bar{m}}m_{\mu}^{(0)}-\frac{1}{2}h_{mm}\bar{m}_{\mu}^{(0)}=h_{lm}n_{\mu}^{(0)}-\frac{1}{2}h_{mm}\bar{m}_{\mu}^{(0)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then,
+ using the NP equations (the commutation relations,
+ Ricci identities and Bianchi identities),
+ one finds that the NP quantities required for the source term can be solved by a sequence of advection equaions along 
+\begin_inset Formula $n^{\mu}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1.\Psi_{4}^{(1)}\rightarrow\Psi_{3}^{(1)},\lambda^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\widehat{\Psi}_{3}^{(1)}=\frac{1}{n^{T}}\left[\left(\widehat{\eth}\widehat{\Psi}_{4}^{(1)}-R\hat{\tau}\widehat{\Psi}_{4}^{(1)}\right)-R\left(4\hat{\mu}\widehat{\Psi}_{3}^{(1)}+\frac{1}{L^{2}}\left(2+R\partial_{R}\right)\widehat{\Psi}_{3}^{(1)}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\widehat{\lambda}^{(1)}=\frac{1}{n^{T}}\left[-\widehat{\Psi}_{4}^{(1)}-R\left(2\Re\left(\hat{\mu}\right)\widehat{\lambda}^{(1)}+\frac{1}{L^{2}}\left(1+R\partial_{R}\right)\widehat{\lambda}^{(1)}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2.\left\{ \begin{array}{c}
+\Psi_{3}^{(1)}\rightarrow\Psi_{2}^{(1)}\\
+\lambda^{(1)}\rightarrow h_{\bar{m}\bar{m}}
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\hat{\Psi}_{2}^{(1)}=\frac{1}{n^{T}}\left[\left(\widehat{\eth}-2R\widehat{\tau}\right)\hat{\Psi}_{3}^{(1)}-R\left(3\hat{\mu}\hat{\Psi}_{2}^{(1)}+\frac{1}{L^{2}}\left(3+R\partial_{R}\right)\hat{\Psi}_{2}^{(1)}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\hat{h}_{\bar{m}\bar{m}}=\frac{1}{n^{T}}\left[-2\hat{\lambda}^{(1)}+R\left(2\Im\left(\hat{\mu}\right)\hat{h}_{\bar{m}\bar{m}}-\frac{1}{L^{2}}\left(1+R\partial_{R}\right)\hat{h}_{\bar{m}\bar{m}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $3.\Psi_{3}^{(1)},\lambda^{(1)},h_{\bar{m}\bar{m}}\rightarrow\pi^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\hat{\pi}^{(1)}=\frac{1}{n^{T}}\left[-2\hat{\Psi}_{3}^{(1)}+R\left(\hat{\bar{\pi}}+\hat{\tau}\right)\left(-\lambda^{(1)}+\frac{1}{2}R\hat{\mu}\hat{h}_{\bar{m}\bar{m}}\right)-\frac{R}{L^{2}}\left(2+R\partial_{R}\right)\hat{\pi}^{(1)}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $4.\hat{h}_{l\bar{m}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\hat{h}_{l\bar{m}}=\frac{1}{n^{T}}\left[-2\hat{\pi}^{(1)}-R\left(\hat{\tau}\hat{h}_{\bar{m}\bar{m}}+\hat{\bar{\mu}}\hat{h}_{l\bar{m}}+\frac{1}{L^{2}}\left(2+R\partial_{R}\right)\hat{h}_{l\bar{m}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where a variable with hat 
+\begin_inset Formula $\hat{f}$
+\end_inset
+
+ is rescaled by its falloff:
+ 
+\begin_inset Formula $f=R^{n}\hat{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The falloffs of variables in the reconstruction equations are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=1:\Psi_{4}^{(1)},\lambda^{(1)},h_{\bar{m}\bar{m}},\rho,\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=2:\Psi_{3}^{(1)},\pi^{(1)},h_{l\bar{m}},\pi,\tau,\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=3:\Psi_{2}^{(1)},h_{ll},\Psi_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the GHP derivative is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\eth}f=\frac{\eth f}{R}=\left\{ \frac{1}{\sqrt{2}}\frac{1}{\left(L^{2}-iaR\cos\vartheta\right)}\left(-ia\sin\vartheta\partial_{T}+\mathcal{D}\right)-\frac{i{\color{}p}}{\sqrt{2}}\frac{aR\sin\vartheta}{\left(L^{2}-iaR\cos\vartheta\right)^{2}}\right\} f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $p$
+\end_inset
+
+ is one of the GHP type of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Electromagnetic perturbations
+\end_layout
+
+\begin_layout Standard
+In the context of electromagnetic perturbation 
+\begin_inset Formula $\phi=0+\zeta\phi^{(1)}+\mathcal{O}(\zeta^{2})$
+\end_inset
+
+,
+ with metric signature 
+\begin_inset Formula $(+,-,-,-)$
+\end_inset
+
+ and the units 
+\begin_inset Formula $8\pi G=c=1$
+\end_inset
+
+ ,
+ we have 
+\begin_inset Formula $\Phi_{mn}=-\phi_{m}\bar{\phi_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{R}_{4}^{(1)}=0,\Psi_{4}^{(1)}=0$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{S}_{4}^{(2)}=0$
+\end_inset
+
+,
+\begin_inset Formula $_{-2}\mathcal{T}\Psi_{4}^{(2)}=\mathcal{R}_{4}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{d}^{(2)}=(\bar{\delta}+2\alpha-\bar{\tau})^{(0)}\Phi_{21}^{(2)}-(\Delta+\bar{\mu}+2\gamma-2\bar{\gamma})^{(0)}\Phi_{20}^{(2)}{\color{}+2\nu^{(0)}\Phi_{10}^{(2)}+\bar{\sigma}^{(0)}\Phi_{22}^{(2)}-2\lambda^{(0)}\Phi_{11}^{(2)}},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{h}^{(2)}=(\Delta+2\bar{\mu}+2\gamma)^{(0)}\Phi_{21}^{(2)}-(\bar{\delta}-\bar{\tau}+2\alpha+2\bar{\beta})^{(0)}\Phi_{22}^{(2)}{\color{}-2\nu^{(0)}\Phi_{11}^{(2)}-\bar{\nu}^{(0)}\Phi_{20}^{(2)}+2\lambda^{(0)}\Phi_{12}^{(2)}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reconstrucion of Maxwell scalars in the non-rotating BHs case
+\end_layout
+
+\begin_layout Standard
+We solve 
+\begin_inset Formula $\phi_{2}^{(1)}$
+\end_inset
+
+ by the Teukolsky equation,
+ then reconstruct 
+\begin_inset Formula $\phi_{1}^{(1)},\phi_{0}^{(1)}$
+\end_inset
+
+ to compute
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathcal{R}_{4}^{(2)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the non-rotating BHs case,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\tau^{(0)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi^{(0)}$
+\end_inset
+
+ vannish,
+ and other non-zero NP scalars reduce to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi_{2}^{(0)}=-\frac{MR^{3}}{L^{6}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho^{(0)}=-\frac{R(L^{2}-2MR)}{2L^{4}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu^{(0)}=-\frac{R}{L^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\epsilon^{(0)}=\frac{MR^{2}}{2L^{4}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\alpha^{(0)}=-\beta^{(0)}=\frac{R\cot\theta}{2\sqrt{2}L^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first order Maxwell equations read
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(D-\rho+2\epsilon)^{(0)}\phi_{2}^{(1)}=(\bar{\delta}+2\pi)\phi_{1}^{(1)}-\lambda^{(0)}\phi_{0}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\delta+2\beta-\tau)^{(0)}\phi_{2}^{(1)}=(\Delta+2\mu)^{(0)}\phi_{1}^{(1)}-\nu^{(0)}\phi_{0}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(D-2\rho)^{(0)}\phi_{1}^{(1)}=(\bar{\delta}-2\alpha+\pi)^{(0)}\phi_{0}^{(1)}-\kappa^{(0)}\phi_{2}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\delta-2\tau)^{(0)}\phi_{1}^{(1)}=(\Delta-2\gamma+\mu)^{(0)}\phi_{0}^{(1)}-\sigma^{(0)}\phi_{2}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which,
+ in the Schwartzschild space,
+ reduce to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(D-\rho+2\epsilon)^{(0)}\phi_{2}^{(1)}=\bar{\delta}\phi_{1}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\delta+2\beta)\phi_{2}^{(1)}=(\Delta+2\mu)^{(0)}\phi_{1}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(D-2\rho)^{(0)}\phi_{1}^{(1)}=(\bar{\delta}-2\alpha)^{(0)}\phi_{0}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\delta\phi_{1}^{(1)}=(\Delta+\mu)^{(0)}\phi_{0}^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall the properties of spin-weighted spherical harmonics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eth\,{}_{s}Y_{lm}=\left(-\partial_{\vartheta}-\frac{\mathrm{i}}{\sin\vartheta}+s\cot\vartheta\right){}_{s}Y_{lm}=\sqrt{(l-s)(l+s+1)}\,{}_{s+1}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\eth^{\prime}\,{}_{s}Y_{lm}=\left(-\partial_{\vartheta}+\frac{\mathrm{i}}{\sin\vartheta}-s\cot\vartheta\right){}_{s}Y_{lm}=-\sqrt{(l+s)(l-s+1)}\,{}_{s-1}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and note that
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{\delta^{(0)}}_{\,0}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\eth^{\prime}\,{}_{0}Y_{lm}=-\frac{R}{\sqrt{2}L^{2}}\sqrt{l(l+1)}\,{}_{-1}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\bar{\delta}-2\alpha)^{(0)}{}_{1}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\eth^{\prime}\,{}_{1}Y_{lm}=-\frac{R}{\sqrt{2}L^{2}}\sqrt{l(l+1)}\,{}_{0}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\bar{\delta}+2\alpha)^{(0)}{}_{-1}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\eth^{\prime}\,{}_{-1}Y_{lm}=-\frac{R}{\sqrt{2}L^{2}}\sqrt{(l-1)(l+2)}\,{}_{-2}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\delta^{(0)}{}_{\,0}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\eth\,{}_{0}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\sqrt{l(l+1)}\,{}_{1}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\delta+2\beta)^{(0)}{}_{\,-1}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\eth\,{}_{-1}Y_{lm}=\frac{R}{\sqrt{2}L^{2}}\sqrt{l(l+1)}\,{}_{0}Y_{lm}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we can expand Maxwell scalars as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{2}^{(1)}=\sum_{l,m}\phi_{2}^{[lm]}(T,R)\,{}_{-1}Y_{lm}(\vartheta,\phi)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{1}^{(1)}=\sum_{l,m}\phi_{1}^{[lm]}(T,R)Y_{lm}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{0}^{(1)}=\sum_{l,m}\phi_{0}^{[lm]}(T,R)\,{}_{1}Y_{lm}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We reconstruct 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\phi_{1}^{[lm]}$
+\end_inset
+
+ via
+\end_layout
+
+\begin_layout Paragraph*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\bar{\delta}\phi_{1}^{(1)}=\frac{R}{\sqrt{2}L^{2}}\eth^{\prime}\,\phi_{1}^{(1)}=(D-\rho+2\epsilon)^{(0)}\phi_{2}^{(1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+i.e.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+-\frac{R}{\sqrt{2}L^{2}}\sqrt{l(l+1)}\,\phi_{1}^{[lm]}=(D-\rho+2\epsilon)^{(0)}\phi_{2}^{[lm]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\phi_{1}^{[lm]}}{R^{2}}=\frac{1}{2\sqrt{2}\sqrt{l(l+1)}\left(L^{2}+2MR\right)}(\frac{8M^{2}R^{2}\psi^{(0,1)}}{L^{2}}-P)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly,
+ we can reconstruct 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta\phi_{1}^{[lm]},\phi_{0}^{[lm]},\Delta\phi_{0}^{[lm]}$
+\end_inset
+
+ via the rest of Maxwell equations.
+\end_layout
+
+\begin_layout Standard
+The derivation of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Delta\phi_{1}^{[lm]}/R^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\Delta\phi_{1}^{[lm]}}{R^{2}}=\left(\frac{2R}{L^{2}}\frac{1}{2\sqrt{2}\sqrt{l(l+1)}\left(L^{2}+2MR\right)}(\frac{8M^{2}R^{2}\psi^{(0,1)}}{L^{2}}-P)+\frac{l(l+1)\psi}{\sqrt{2}\sqrt{l(l+1)}L^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivation of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\partial_{T}\frac{\phi_{1}^{[lm]}}{R^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Delta\phi_{1}^{[lm]}=\Delta(R^{2}\frac{\phi_{1}^{[lm]}}{R^{2}})=2n^{R}R\frac{\phi_{1}^{[lm]}}{R^{2}}+R^{2}(n^{T}\partial_{T}(\frac{\phi_{1}^{[lm]}}{R^{2}})+n^{R}\partial_{R}(\frac{\phi_{1}^{[lm]}}{R^{2}}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\partial_{T}\frac{\phi_{1}^{[lm]}}{R^{2}}=\frac{1}{n^{T}}(\frac{\Delta\phi_{1}^{[lm]}}{R^{2}}-2\frac{n^{R}}{R}\frac{\phi_{1}^{[lm]}}{R^{2}}-n^{R}\partial_{R}(\frac{\phi_{1}^{[lm]}}{R^{2}}))
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The derivation of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\phi_{0}^{[lm]}/R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\phi_{0}^{[lm]}}{R^{3}}=\frac{2M^{2}R^{2}\psi^{(0,2)}}{l(l+1)\left(L^{2}+2MR\right)^{2}}+\frac{4M^{2}R\psi^{(0,1)}\left(L^{2}+MR\right)}{l(l+1)\left(L^{2}+2MR\right)^{3}}-\frac{L^{2}P^{(0,1)}}{4l(l+1)\left(L^{2}+2MR\right)^{2}}+\frac{L^{2}MP}{2l(l+1)\left(L^{2}+2MR\right)^{3}}-\frac{2M^{2}\psi}{L^{4}+2L^{2}MR}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{2M^{2}R}{l(l+1)\left(L^{2}+2MR\right)^{2}}(R\psi^{(0,2)}+\frac{2\psi^{(0,1)}\left(L^{2}+MR\right)}{\left(L^{2}+2MR\right)})+\frac{L^{2}}{2l(l+1)\left(L^{2}+2MR\right)^{2}}(\frac{MP}{L^{2}+2MR}-\frac{P^{(0,1)}}{2})-\frac{2M^{2}\psi}{L^{2}\left(L^{2}+2MR\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\partial_{T}\frac{\phi_{0}^{[lm]}}{R^{3}}=\frac{1}{n^{T}}(\frac{\Delta\phi_{0}^{[lm]}}{R^{3}}-3\frac{n^{R}}{R}\frac{\phi_{0}^{[lm]}}{R^{3}}-n^{R}\partial_{R}(\frac{\phi_{0}^{[lm]}}{R^{3}}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivation of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Delta\phi_{0}^{[lm]}/R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\phi_{0}^{[lm]}=\frac{R}{L^{2}}\left[\phi_{0}^{[lm]}+\sqrt{\frac{l(l+1)}{2}}\phi_{1}^{[lm]}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivation of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Delta^{2}\phi_{0}^{[lm]}/R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta^{2}\phi_{0}^{[lm]}=(\Delta\frac{R}{L^{2}})\left[\phi_{0}^{[lm]}+\sqrt{\frac{l(l+1)}{2}}\phi_{1}^{[lm]}\right]+\frac{R}{L^{2}}[\Delta\phi_{0}^{[lm]}+\sqrt{\frac{l(l+1)}{2}}\Delta\phi_{1}^{[lm]}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{n^{R}}{L^{2}}[\phi_{0}^{[lm]}+\sqrt{\frac{l(l+1)}{2}}\phi_{1}^{[lm]}]+\frac{R}{L^{2}}[\Delta\phi_{0}^{[lm]}+\sqrt{\frac{l(l+1)}{2}}\Delta\phi_{1}^{[lm]}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta^{2}\phi_{0}^{[lm]}}{R^{3}}=\frac{R}{L^{2}}\frac{\Delta\phi_{0}^{[lm]}}{R^{3}}+\frac{1}{L^{2}}[R\frac{\Delta\phi_{0}^{[lm]}}{R^{3}}+\sqrt{\frac{l(l+1)}{2}}\frac{\Delta\phi_{1}^{[lm]}}{R^{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\frac{1}{L^{2}}[2R\frac{\Delta\phi_{0}^{[lm]}}{R^{3}}+\sqrt{\frac{l(l+1)}{2}}\frac{\Delta\phi_{1}^{[lm]}}{R^{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The derivation of
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\Delta\phi_{2}^{[lm]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta\phi_{2}^{[lm]}=\Delta\left(R\,\,_{-1}\hat{\psi}^{[l_{1}m_{1}]}\right)=n^{R}\,\,_{-1}\hat{\psi}^{[l_{1}m_{1}]}+\,\,R\,\,\Delta_{-1}\hat{\psi}^{[l_{1}m_{1}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta^{2}\phi_{2}^{[lm]}=n^{R}\partial_{R}n^{R}\,\,_{-1}\hat{\psi}^{[lm]}\,\,+\,\,2n^{R}\,\,\Delta_{-1}\hat{\psi}^{[lm]}\,\,+\,\,R\,\,\Delta^{2}\,\,_{-1}\hat{\psi}^{[l_{1}m_{1}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta^{2}\,\,_{-1}\hat{\psi}^{[l_{1}m_{1}]}=n^{T\,\,2}\,\,\partial_{T}^{2}\psi+n^{R}\left(2n^{T}\partial_{R}\,\,\partial_{T}\psi+\,\,n^{R}\partial_{R}^{2}\psi\,\,+\,\,\frac{4M}{L^{2}}\partial_{T}\psi+\frac{2R}{L^{2}}\partial_{R}\psi\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Source
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\left(\frac{2\Sigma}{R}\right)\,\,_{-2}\mathcal{T}\left(R\hat{\psi}\right)=\left(\frac{2\Sigma}{R}\right)\mathcal{R}_{4}^{(2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathcal{R}_{4}^{(2)}=d_{4}^{(0)}\mathcal{R}_{d}^{(2)}+d_{3}^{(0)}\mathcal{R}_{h}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\begin{aligned}d_{3} & \equiv\bar{\delta}+3\alpha+\bar{\beta}+4\pi-\bar{\tau},\\
+d_{4} & \equiv\Delta+4\mu+\bar{\mu}+3\gamma-\bar{\gamma},
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{d}^{(2)}=(\bar{\delta}+2\alpha-\bar{\tau})^{(0)}\Phi_{21}^{(2)}-(\Delta+\bar{\mu}+2\gamma-2\bar{\gamma})^{(0)}\Phi_{20}^{(2)}{\color{}+2\nu^{(0)}\Phi_{10}^{(2)}+\bar{\sigma}^{(0)}\Phi_{22}^{(2)}-2\lambda^{(0)}\Phi_{11}^{(2)}},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathcal{R}_{h}^{(2)}=(\Delta+2\bar{\mu}+2\gamma)^{(0)}\Phi_{21}^{(2)}-(\bar{\delta}-\bar{\tau}+2\alpha+2\bar{\beta})^{(0)}\Phi_{22}^{(2)}{\color{}-2\nu^{(0)}\Phi_{11}^{(2)}-\bar{\nu}^{(0)}\Phi_{20}^{(2)}+2\lambda^{(0)}\Phi_{12}^{(2)}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+reduce to
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{2\Sigma}{R}=\frac{2L^{4}}{R^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\begin{aligned}d_{3} & \equiv\bar{\delta}+2\alpha,\\
+d_{4} & \equiv\Delta+5\mu,
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{R}_{d}^{(2)}=(\bar{\delta}+2\alpha)^{(0)}\Phi_{21}^{(2)}-(\Delta+\bar{\mu})^{(0)}\Phi_{20}^{(2)},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathcal{R}_{h}^{(2)}=(\Delta+2\bar{\mu})^{(0)}\Phi_{21}^{(2)}-(\bar{\delta}+2\alpha+2\bar{\beta})^{(0)}\Phi_{22}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+First part
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{21}^{(2)}=-\phi_{2}^{(1)}\bar{\phi}_{1}^{(1)}=\sum_{l_{1}m_{1}}\phi_{2}^{[l_{1}m_{2}]}\,{}_{-1}Y_{l_{1}m_{1}}\sum_{l_{2}m_{2}}\bar{\phi}_{1}^{[l_{2}m_{2}]}\,{}_{0}\bar{Y}_{l_{2}m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $_{s}\bar{Y}_{lm}=(-1)^{s+m}{}_{-s}Y_{l,-m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{21}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}+1}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}\,{}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)^{(0)}\Phi_{21}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}+1}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}\,(\bar{\delta}+2\alpha)^{(0)}({}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)^{(0)}({}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}})={}_{0}Y_{l_{2}-m_{2}}(\bar{\delta}+2\alpha)^{(0)}({}_{-1}Y_{l_{1}m_{1}})+{}_{-1}Y_{l_{1}m_{1}}(\bar{\delta})^{(0)}({}_{0}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\frac{R}{\sqrt{2}L^{2}}(\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\Delta+5\mu)^{(0)}(\bar{\delta}+2\alpha)^{(0)}\Phi_{21}^{(2)}=\frac{1}{\sqrt{2}L^{2}}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}(\Delta+5\mu)^{(0)}[R\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}](\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\Delta+5\mu)^{(0)}[R\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}]=(n^{R}+5\mu R)\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+R\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+R\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{2L^{4}}{R^{3}}(\Delta+5\mu)^{(0)}(\bar{\delta}+2\alpha)^{(0)}\Phi_{21}^{(2)}=\frac{\sqrt{2}L^{2}}{R^{3}}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}[(n^{R}+5\mu R)\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+R\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+R\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}](\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sqrt{2}L^{2}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}[(n^{R}+5\mu R)\frac{\phi_{2}^{[l_{1}m_{2}]}}{R}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+\Delta\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}](\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)^{(0)}(\Delta+2\bar{\mu})^{(0)}\Phi_{21}^{(2)}=(\bar{\delta}+2\alpha)^{(0)}(\Delta+2\bar{\mu})^{(0)}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}+1}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}\,({}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}+1}(\Delta+2\bar{\mu})^{(0)}(\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]})\,(\bar{\delta}+2\alpha)^{(0)}({}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{2L^{4}}{R^{3}}(\bar{\delta}+2\alpha)^{(0)}(\Delta+2\bar{\mu})^{(0)}\Phi_{21}^{(2)}=\frac{2L^{4}}{R^{3}}\frac{R}{\sqrt{2}L^{2}}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}+2\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]})(\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\frac{\sqrt{2}L^{2}}{R^{2}}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}+2\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{1}^{[l_{2}m_{2}]})(\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\sqrt{2}L^{2}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+2\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}})(\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\mathcal{S}_{1}=\frac{2L^{4}}{R^{3}}\left[(\Delta+5\mu)^{(0)}(\bar{\delta}+2\alpha)^{(0)}+(\bar{\delta}+2\alpha)^{(0)}(\Delta+2\bar{\mu})^{(0)}\right]\Phi_{21}^{(2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\sqrt{2}L^{2}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}[(n^{R}+7\mu R)\frac{\phi_{2}^{[l_{1}m_{2}]}}{R}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+2\Delta\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}+2\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta\bar{\phi}_{1}^{[l_{2}m_{2}]}}{R^{2}}](\sqrt{(l_{1}-1)(l_{1}+2)}\,{}_{-2}Y_{l_{1}m_{1}}\,{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Second part
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{20}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}\,{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\Delta+5\mu)(\Delta+\bar{\mu})\Phi_{20}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}(\Delta+5\mu)(\Delta+\bar{\mu})[\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}]\,{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\Delta+5\mu)(\Delta+\bar{\mu})[\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}]=(\Delta+5\mu)[\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}+\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\Delta^{2}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+2\Delta\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta^{2}\bar{\phi}_{0}^{[l_{2}m_{2}]}+n^{R}\partial_{R}\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\bar{\mu}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
++5\mu[\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}+\bar{\mu}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\Delta^{2}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+2\Delta\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta^{2}\bar{\phi}_{0}^{[l_{2}m_{2}]}+6\bar{\mu}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]})+(n^{R}\partial_{R}\bar{\mu}+5\mu\bar{\mu})\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{2L^{4}}{R^{3}}(\Delta+5\mu)(\Delta+\bar{\mu})\Phi_{20}^{(2)}=\frac{2L^{4}}{R^{3}}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}[\Delta^{2}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+2\Delta\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta^{2}\bar{\phi}_{0}^{[l_{2}m_{2}]}+6\bar{\mu}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}+\phi_{2}^{[l_{1}m_{2}]}\,\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]})+(n^{R}\partial_{R}\bar{\mu}+5\mu\bar{\mu})\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{0}^{[l_{2}m_{2}]}]\,{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2L^{4}\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}[\Delta^{2}\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}}+2\Delta\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}}+\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta^{2}\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}}+6\bar{\mu}(\Delta\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}}+\phi_{2}^{[l_{1}m_{2}]}\,\frac{\Delta\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}})+(n^{R}\partial_{R}\bar{\mu}+5\mu\bar{\mu})\phi_{2}^{[l_{1}m_{2}]}\,\frac{\bar{\phi}_{0}^{[l_{2}m_{2}]}}{R^{3}}]\,{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Third part
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{22}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{2}^{[l_{2}m_{2}]}\,{}_{-1}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)(\bar{\delta}+2\alpha+2\bar{\beta})^{(0)}\Phi_{22}^{(2)}=\sum_{l_{1}m_{1}}\sum_{l_{2}m_{2}}(-1)^{m_{2}}\phi_{2}^{[l_{1}m_{2}]}\,\bar{\phi}_{2}^{[l_{2}m_{2}]}\,(\bar{\delta}+2\alpha)(\bar{\delta}+2\alpha+2\bar{\beta})^{(0)}({}_{-1}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)(\bar{\delta}+2\alpha-2\alpha)^{(0)}({}_{-1}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}})=(\bar{\delta}+2\alpha)[{}_{1}Y_{l_{2}-m_{2}}(\bar{\delta}+2\alpha)({}_{-1}Y_{l_{1}m_{1}})+{}_{-1}Y_{l_{1}m_{1}}(\bar{\delta}-2\alpha)({}_{1}Y_{l_{2}-m_{2}})]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=-\frac{R}{\sqrt{2}L^{2}}(\bar{\delta}+2\alpha)[\sqrt{(l_{1}-1)(l_{1}+2)}{}_{-2}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\frac{R^{2}}{2L^{4}}[\sqrt{(l_{1}-1)(l_{1}+2)}[\sqrt{(l_{1}-2)(l_{1}+3)}{}_{-3}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-2}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}]+\sqrt{l_{2}(l_{2}+1)}[\sqrt{(l_{1}-1)(l_{1}+2)}{}_{-2}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}]]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{R^{2}}{2L^{4}}[\sqrt{(l_{1}-1)(l_{1}+2)}[\sqrt{(l_{1}-2)(l_{1}+3)}{}_{-3}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}}+2\sqrt{l_{2}(l_{2}+1)}{}_{-2}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}]+l_{2}(l_{2}+1){}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+4\alpha-2\alpha)({}_{-2}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}})={}_{1}Y_{l_{2}-m_{2}}(\bar{\delta}+4\alpha){}_{-2}Y_{l_{1}m_{1}}+{}_{-2}Y_{l_{1}m_{1}}(\bar{\delta}-2\alpha){}_{1}Y_{l_{2}-m_{2}}=-\frac{R}{\sqrt{2}L^{2}}[\sqrt{(l_{1}-2)(l_{1}+3)}{}_{-3}Y_{l_{1}m_{1}}{}_{1}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-2}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\bar{\delta}+2\alpha)({}_{-1}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}})=-\frac{R}{\sqrt{2}L^{2}}[\sqrt{(l_{1}-1)(l_{1}+2)}{}_{-2}Y_{l_{1}m_{1}}{}_{0}Y_{l_{2}-m_{2}}+\sqrt{l_{2}(l_{2}+1)}{}_{-1}Y_{l_{1}m_{1}}{}_{-1}Y_{l_{2}-m_{2}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
