@@ -3,7 +3,7 @@ using CSV,DataFrames
 using Plots
 # using BenchmarkTools
 
-# To include custom module
+# To include custom modules
 include("cheb.jl")
 include("TimeIntegrator.jl")
 include("Maxwell_recon.jl")
