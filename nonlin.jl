@@ -1,37 +1,50 @@
 using DoubleFloats, LinearAlgebra
 using CSV,DataFrames
+using Plots
 # using BenchmarkTools
+
+# To include custom module
 include("cheb.jl")
 include("TimeIntegrator.jl")
 include("Maxwell_recon.jl")
 include("SpheHarmonics.jl")
 
-## set parameters
-Tend1 = 190; Tend2 = 1000;
-N = 180;
-k = 0; b = 1;
+## 1.set parameters
 
-s1 = -1; l1 = 2; m1 = 2; l2 = l1; m2 = -2;
-s2 = -2; l3 = 4; m3 = m1-m2; 
-# self channel (l1,m1)(l1,-m1) -> (l3,m3)
+# mode coupling (l1,m1)(l2,m2) → (l3,m3)
+l1 = 2; l2 = l1; l3 = 4; 
+m1 = 2; m2 = -2; m3 = m1-m2; 
+
+# the start time of the tail phase for ϕ₂
+Tend1 = 160;    # when l1 = 1;
+# Tend1 = 190;  # when l1 = 2; 
+# Tend1 = 260;  # when l1 = 3;
+
+Tend2 = 1500;
+N = 180; 
+k = 0; b = 1; # parameters for Gaussian wave packet
+s1 = -1; s2 = -2; # spin weight
+
+# 
 G20 = Gaunt(-2,0 ,2,l1,l2,l3,m1,-m2,-m3);
 G11 = Gaunt(-1,-1,2,l1,l2,l3,m1,-m2,-m3);
 G31 = Gaunt(-3,1 ,2,l1,l2,l3,m1,-m2,-m3);
 
 # default parameters
 M = 1; L = 1; 
-dT = 1; T1 = 0:dT:Tend1;
+dT = 1; # the time interval for storing data
+T1 = 0:dT:Tend1;
 
-## set grids points and equation coefficients
+## 2.set grids points and equation coefficients
 # We compactify the coordinate r to R via R = L^2/r.
 
 # horizon
 rH = 2*M; 
 RH = L^2/rH; # RH equals 1/2 by default, which is an exact float.
-# grids
+# Cheb grids
 D,R = chebQ(N); R = (R .+ 1) * (RH/2); D = D / (RH/2); D2 = D^2;
 # set T step
-dt = Double64(2^-10);  #9.765625e-4
+dt = Double64(2^-10);  # 9.765625e-4
 # internal loop
 tN = Int(ceil(dT/dt));
 # external loop
@@ -64,19 +77,18 @@ A_Sn   = A_Sn[:,N+2:end];
 A_Snp1 = A_Snp1[:,N+2:end];
 A_Ṡ    = A_Ṡ[:,N+2:end];
 
-# initial data
-center = Double64(RH)/2; w = Double64(RH)/10;  
+## 3.initial data
+center = Double64(RH)/2; w = Double64(RH)/10;
 
+# initial data for ϕ₂
 # stationary init
-# ψ̂1init = k * exp.( -((R .- center)/w).^2 ) .+ b;
-# ψ̇1init = 0*ψ̂1init; # time derivative of \psi
+ψ̂1init = k * exp.( -((R .- center)/w).^2 ) .+ b;
+ψ̇1init = 0*ψ̂1init; # time derivative of ψ
 
 # non stationary init
-ψ̇1init = k * exp.( -((R .- center)/w).^2 ) .+ b;
-ψ̂1init = 0*ψ̇1init; 
+# ψ̇1init = k * exp.( -((R .- center)/w).^2 ) .+ b;
+# ψ̂1init = 0*ψ̇1init; 
 
-
-ψ̂1init = k * exp.( -((R .- center)/w).^2 ) .+ b;
 # ingoing init
 # nᵀ =  2 .+ 4*M*R/L^2; nᴿ = R.^2/L^2; 
 # ψ̇1init = - nᴿ/nᵀ .* D * ψ̂1init; 
@@ -89,14 +101,21 @@ center = Double64(RH)/2; w = Double64(RH)/10;
 P1init = cTT .* ψ̇1init + cTR .* D * ψ̂1init + cT1 .* ψ̂1init;
 vl1 = [ψ̂1init;P1init];
 
-u = vl1;
+# initial data for Ψ₄
+# zero initial data 
+u = 0*vl1;
+
+# ψ̂2init = 1 * exp.( -((R .- center)/w).^2 ) .+ 0;
+# ψ̇2init = 0*ψ̂2init;
+# P2init = cTT .* ψ̇2init + cTR .* D * ψ̂2init + cT2 .* ψ̂2init;
+# u = [ψ̂2init;P2init];
 
 sol1 = zeros(Double64,2*(N+1),TN);
 sol1[:,1] = vl1;
 sol2 = zeros(Double64,2*(N+1),TN);
 sol2[:,1] = u;
 
-# Matries needed to reconstruct the Source term S and ∂S_∂v
+## 4.Matries needed to reconstruct the Source term S and ∂S_∂v
 ∂Δϕ2_∂v = zeros(Double64, N+1, 2(N+1))
 #∂Δϕ2_∂ψ
 ∂Δϕ2_∂v[:,1:N+1] = Diagonal( -R/(2M) ) + (R.*(L^4 .- 4M^2*R.^2)/(4*L^2*M^2)) .* D;
@@ -131,6 +150,7 @@ sol2[:,1] = u;
 # Source function
 Sl1l2(vl1,vl2) = Source_fun(vl1,vl2,l1,l2,m2,∂Δϕ2_∂v,∂Δ²ϕ2_∂v_l1,∂ϕ̂1_∂v_l2,∂Δ̂ϕ̂1_∂v_l2,∂ϕ̂0_∂v_l2,∂Δ̂ϕ̂0_∂v_l2,∂Δ̂²ϕ̂0_∂v_l2,Ł_1_l1,Ł_1_l2,N,R,L,G20,G11,G31);
 
+## 5. evolution in cheb grids
 print("Start\n")
 time_symmetric_integrate_nonlinear!(sol1,sol2,TN,tN,dt,A_1_l1,A_2_l3,A_Sn,A_Snp1,A_Ṡ,vl1,u,Sl1l2)
 
@@ -142,9 +162,9 @@ R2x(R) = 2*R/RH .- 1;
 ψ̂2old = ψ̂2sol1[:,end]; P2old = P2sol1[:,end];
 
 κ = abs( log( abs(ψ̂1old[end]/(D[end,:]' * ψ̂1old)) )); # Note that D[end,:] is of size(N+1,1) in Julia.
-# κ = κ + df64".5"
+
 ########################################
-# new grids
+## 6. transform into AnMR grids
 T2 = Tend1:dT:Tend2; TN = Int(ceil( (Tend2-Tend1)/dT + 1)); # update TN
 N = 180; # update N
 Dnew,xnew = chebQ(N);
@@ -169,7 +189,6 @@ sol12[:,1] = vl1;
 sol22 = zeros(Double64,2*(N+1),TN);
 sol22[:,1] = u;
 
-########################################
 # update eqcoefs R→Rnew, D→Dnew, D2→D2new
 cTT = cTTFun(Rnew); cTR =  cTRFun(Rnew); cRR = cRRFun(Rnew);
 
@@ -228,6 +247,7 @@ A_Ṡ    = A_Ṡ[:,N+2:end];
 Sl1l2(vl1,vl2) = Source_fun(vl1,vl2,l1,l2,m2,∂Δϕ2_∂v,∂Δ²ϕ2_∂v_l1,∂ϕ̂1_∂v_l2,∂Δ̂ϕ̂1_∂v_l2,∂ϕ̂0_∂v_l2,∂Δ̂ϕ̂0_∂v_l2,∂Δ̂²ϕ̂0_∂v_l2,Ł_1_l1,Ł_1_l2,N,Rnew,L,G20,G11,G31);
 ########################################
 
+## 7. evolution in AnMR grids
 print("Start_nonlinear\n")
 time_symmetric_integrate_nonlinear!(sol12,sol22,TN,tN,dt,A_1_l1,A_2_l3,A_Sn,A_Snp1,A_Ṡ,vl1,u,Sl1l2)
 
@@ -236,11 +256,11 @@ time_symmetric_integrate_nonlinear!(sol12,sol22,TN,tN,dt,A_1_l1,A_2_l3,A_Sn,A_Sn
 
 ψ̇1sol2 = ( P1sol2 - cTR.*(Dnew * ψ̂1sol2) - cT1.*ψ̂1sol2 )./cTT;
 ψ̇2sol2 = ( P2sol2 - cTR.*(Dnew * ψ̂2sol2) - cT2.*ψ̂2sol2 )./cTT;
+
 LPI1 = T2' .* ψ̇1sol2 ./ ψ̂1sol2;
 LPI2 = T2' .* ψ̇2sol2 ./ ψ̂2sol2;
 
-# T1,T2,R,Rnew ,ψ̂1sol2,ψ̂2sol2,LPI1,LPI2
-# ϕ1 ϕ0
+## save data
 CSV.write("Rnew.csv", Rnew);
 df = DataFrame(LPI1, :auto); CSV.write("LPI1.csv", df);
 df = DataFrame(LPI2, :auto); CSV.write("LPI2.csv", df);
@@ -251,3 +271,55 @@ df = DataFrame(ψ̂2sol1, :auto); CSV.write("psi4sol1.csv", df);
 print("End")
 
 # plot(T2,LPI2[1:N:end,:]',xlims=(T2[1],T2[end]),ylims=(-(2*l3+4),0))
+
+
+ϕ̂1sol2 = ∂ϕ̂1_∂v_l2 * sol12;
+Δ̂ϕ̂1sol2 = ∂Δ̂ϕ̂1_∂v_l2 * sol12;
+ϕ̇1sol2 = (Δ̂ϕ̂1sol2 - 2*Rnew/L^2 .* ϕ̂1sol2 - Rnew.^2/L^2 .* Dnew* ϕ̂1sol2)./(2 .+ 4*M*Rnew/L^2);
+LPIϕ̂1 = T2' .* ϕ̇1sol2 ./ ϕ̂1sol2;
+# plot(T2,LPIϕ̂1[1,:],xlims=(T2[1],T2[end]),ylims=(-10,0))
+
+ϕ̂0sol2 = ∂ϕ̂0_∂v_l2 * sol12;
+Δ̂ϕ̂0sol2 = ∂Δ̂ϕ̂0_∂v_l2 * sol12;
+ϕ̇0sol2 = (Δ̂ϕ̂0sol2 - 3*Rnew/L^2 .* ϕ̂0sol2 - Rnew.^2/L^2 .* Dnew * ϕ̂0sol2)./(2 .+4*M*Rnew/L^2);
+LPIϕ̂0 = T2' .* ϕ̇0sol2 ./ ϕ̂0sol2;
+# plot(T2,LPIϕ̂0[1,:],xlims=(T2[1],T2[end]),ylims=(-10,0))
+
+df = DataFrame(LPIϕ̂1, :auto); CSV.write("LPIphi1.csv", df);
+df = DataFrame(LPIϕ̂0, :auto); CSV.write("LPIphi0.csv", df);
+
+# plot(T2,log10.(abs.(ψ̂2sol2[1,:])))
+
+df = DataFrame(real_to_chebQ(ψ̂1old), :auto); CSV.write("phi2old_spec.csv", df);
+df = DataFrame(real_to_chebQ(ψ̂1init), :auto); CSV.write("phi2new_spec.csv", df);
+df = DataFrame(real_to_chebQ(ψ̂1sol2[:,end]), :auto); CSV.write("phi2end_spec.csv", df);
+
+df = DataFrame(real_to_chebQ(ψ̂2old), :auto); CSV.write("psi4old_spec.csv", df);
+df = DataFrame(real_to_chebQ(ψ̂2init), :auto); CSV.write("psi4new_spec.csv", df);
+df = DataFrame(real_to_chebQ(ψ̂2sol2[:,end]), :auto); CSV.write("psi4end_spec.csv", df);
+
+Send,Ṡend = Sl1l2(sol12[:,end],sol12[:,end]);
+df = DataFrame(Send, :auto); CSV.write("SourceEnd.csv", df);
+df = DataFrame(real_to_chebQ(Send), :auto); CSV.write("SourceEnd_spec.csv", df);
+
+ψ̂2H = [ψ̂2sol1[1,:];ψ̂2sol2[1,2:end]];
+# plot(0:1000,log10.(abs.(ψ̂2H)))
+ψ̂2I = [ψ̂2sol1[end,:];ψ̂2sol2[end,2:end]];
+
+ψ̂1H = [ψ̂1sol1[1,:];ψ̂1sol2[1,2:end]];
+# plot(0:1000,log10.(abs.(ψ̂2H)))
+ψ̂1I = [ψ̂1sol1[end,:];ψ̂1sol2[end,2:end]];
+
+CSV.write("psi4_H.csv", ψ̂2H);
+CSV.write("psi4_I.csv", ψ̂2I);
+CSV.write("phi2_H.csv", ψ̂1H);
+CSV.write("phi2_I.csv", ψ̂1I);
+
+Source2 = 0*ψ̂2sol2;
+Ṡource2 = 0*ψ̂2sol2;
+for ii = 1:length(T2)
+    Source2[:,ii],Ṡource2[:,ii] = Sl1l2(sol12[:,ii],sol12[:,ii]);
+end
+
+df = DataFrame(Source2, :auto); CSV.write("Source2.csv", df);
+df = DataFrame(Ṡource2, :auto); CSV.write("Source2_dot.csv", df);
