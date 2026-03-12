@@ -5,6 +5,7 @@ using Plots
 include("cheb.jl")
 include("TimeIntegrator.jl")
 
+# the parameter setting in this code correpsonds to Figure 4 of the paper
 
 ## set parameters
 s = -2; # spin-weight
